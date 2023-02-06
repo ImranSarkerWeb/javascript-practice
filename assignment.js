@@ -40,3 +40,27 @@ function evenOdd(message) {
 }
 console.log(evenOdd('Batch7')) //-->even
 console.log(evenOdd(['Imran Sarker'])) //-->Please input as string
+
+
+
+// problem 03
+/* isLGSeven() function takes input as number,
+deduct seven from it.
+if the deduct result is less than seven then return the number;
+else the deduct result is greater than seven then return number*2;
+*/
+function isLGSeven(number) {
+    if (typeof number === 'number') {
+        const deductSeven = number - 7;
+        if (deductSeven < 7) {
+            return number;
+        } else {
+            return number * 2
+        }
+    } else {
+        return 'Please input as number.'
+    }
+}
+console.log(isLGSeven(6))
+console.log(isLGSeven(66))
+console.log(isLGSeven('66'))
