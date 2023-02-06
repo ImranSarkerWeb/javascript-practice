@@ -17,3 +17,26 @@ console.log(mindGame(5)) //--> 7.5
 console.log(mindGame(50)) // --> 75
 console.log(mindGame(-33)) //--> -49.5
 console.log(mindGame('25')) //--> please input as a number
+
+
+
+//problem 2
+/* evenOdd() function takes input as string
+calculate the total character.
+if ther number will even then return as even
+else return as odd.
+*/
+function evenOdd(message) {
+    if (typeof message === 'string') {
+        const characterCount = message.length;
+        if (characterCount % 2 == 0) {
+            return 'even';
+        } else {
+            return 'odd';
+        }
+    } else {
+        return "Please input as string."
+    }
+}
+console.log(evenOdd('Batch7')) //-->even
+console.log(evenOdd(['Imran Sarker'])) //-->Please input as string
