@@ -10,10 +10,10 @@ function mindGame(number) {
     if (typeof number === "number") {
         return (((number * 3) + 10) / 2) - 5;
     } else {
-        return "Please input as number.";
+        return "Please input as a number.";
     }
 }
-console.log(mindGame(5))
-console.log(mindGame(50))
-console.log(mindGame(-33))
-console.log(mindGame('25'))
+console.log(mindGame(5)) //--> 7.5
+console.log(mindGame(50)) // --> 75
+console.log(mindGame(-33)) //--> -49.5
+console.log(mindGame('25')) //--> please input as a number
