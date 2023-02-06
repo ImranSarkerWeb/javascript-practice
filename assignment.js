@@ -15,7 +15,7 @@ function mindGame(number) {
 }
 console.log(mindGame(5)) //--> 7.5
 console.log(mindGame(50)) // --> 75
-console.log(mindGame(-33)) //--> -49.5
+console.log(mindGame(33)) //--> -49.5
 console.log(mindGame('25')) //--> please input as a number
 
 
@@ -53,7 +53,7 @@ function isLGSeven(number) {
     if (typeof number === 'number') {
         const deductSeven = number - 7;
         if (deductSeven < 7) {
-            return number;
+            return deductSeven;
         } else {
             return number * 2
         }
