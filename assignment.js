@@ -92,7 +92,6 @@ function findingBadData(arrayOfNumber) {
 console.log(findingBadData([-4, -9, -5, -33, -55]))
 console.log(findingBadData(['this is just test', 'imarna.', 'this']))
 console.log(findingBadData('oop is ther'))
-
 // problem 5
 /*
 gemsToDiamond() function takes input three friend gems as number.
