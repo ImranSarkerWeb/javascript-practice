@@ -9,8 +9,21 @@
 let purchase1 = {
     shoes: 100,
     stateTax: 1.2,
-    total: function () {
+    totalPrice: function () {
         const calculation = this.shoes * this.stateTax;
         console.log('Total Price:', calculation)
     }
 }
+
+/* 
+    Functions inside object are known as methods.
+    Now that the purchase1 object is created. We can access the totalPrice method on the purchase1 object using the dot notation.
+*/
+purchase1.totalPrice(); //120
+
+/* 
+    Using the dot notation, we can access all the property and methods from an object.
+
+
+    an advantage to using the OOP aproach is that we can build as many object as we need.
+*/
