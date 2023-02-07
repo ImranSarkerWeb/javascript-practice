@@ -108,7 +108,7 @@ function gemsToDiamond(firstFriendGems, secondFriendGems, thirdFriendGems) {
         const friend2Gems = secondFriendGems * 32;
         const friend3Gems = thirdFriendGems * 43;
         const totalGems = friend1Gems + friend2Gems + friend3Gems;
-        if (totalGems >= 1000 * 2) {
+        if (totalGems > 1000 * 2) {
             return totalGems - 2000;
         } else {
             return totalGems;
