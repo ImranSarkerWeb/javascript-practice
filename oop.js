@@ -10,7 +10,7 @@ let purchase1 = {
     shoes: 100,
     stateTax: 1.2,
     totalPrice: function () {
-        const calculation = this.shoes * this.stateTax;
+        const calculation = this.shoes * this.stateTax; //this keyword refferd the object, it helps to create method withoud thinking about the object name
         console.log('Total Price:', calculation)
     }
 }
