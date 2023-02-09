@@ -48,3 +48,12 @@ function addNewItem (){
     let randomColor = Math.floor(444*(Math.random()+1))
     document.body.style.backgroundColor = '#' + randomColor
 }
+
+const confirmField = document.getElementById('delete-item');
+const btnDelete = document.getElementById('btn-delete');
+
+confirmField.addEventListener('keyup', function(event){
+    let confirm = event.target.value;
+   
+    confirm === 'delete' ? btnDelete.removeAttribute('disabled') : btnDelete.setAttribute('disabled', true)
+})
