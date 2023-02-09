@@ -40,9 +40,11 @@ console.log(positionToAdd)
 
 
 function addNewItem (){
-    //const text = item.value;
-    // let things = '<li>' + '+ text +' + '</li>'
-    // positionToAdd.appendChild(things)
+    let text = item.value;
+    const li = document.createElement('li');
+    li.innerText = text;
+    item.value ? positionToAdd.appendChild(li) : item.style.border = "5px solid red"
+    item.value = '';
     let randomColor = Math.floor(444*(Math.random()+1))
     document.body.style.backgroundColor = '#' + randomColor
 }
