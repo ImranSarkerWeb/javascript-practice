@@ -9,3 +9,9 @@
 
 
 //lets demonstrat it with a example
+
+const bird = {
+    hasWings: true,
+    canFly: true,
+    hasFeathers: true,
+}
