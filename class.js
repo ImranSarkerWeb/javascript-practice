@@ -32,3 +32,14 @@ class Car{
 */
 
 const car1 = new Car("red", 120)
+
+
+// ======================================Creating classes==================================== \\
+
+/* 
+    By now, we knew that inheritance in JavaScript is based around the prototype object.
+
+    All objects that are built from the prototype share the same functionality.
+
+    When you need to code more complex OOP relationships, we can use the class keyword and its easy-to-understand and easy-to-reason-about syntax.
+*/
