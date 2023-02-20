@@ -46,7 +46,7 @@ const car1 = new Car("red", 120);
 
 //use the class keyword, then specify the name of our class, with the first letter capitalized, and then we add an opening and a closing curly brace.
 
-class Trian {} //a Train class created
+//class Trian {} //a Train class created
 
 //Once we've coded this class, we'll be able to use the keyword "new" to instantiate objects of the Train class.
 
@@ -54,8 +54,8 @@ class Trian {} //a Train class created
     In between the curly braces, the first piece of code that we need to define is the "constructor":
 */
 
-class Trian {
-  constructor() {
+class Train {
+  constructor(color, lightsOn) {
     //The constructor will be used to build properties on the future object instance of the Train class.
 
     // For now, let's say that there are only two properties that each object instance of the Train class should have at the time it gets instantiated: color and lightsOn.
@@ -63,5 +63,55 @@ class Trian {
     this.lightsOn = lightsOn;
   }
 //   Notice the syntax of the constructor. The constructor is a special function in my Train class.
+/* 
+  First of all, notice that there is no function keyword. Also, notice that the keyword constructor is used to define this function. 
+  You give your constructor function parameters inside an opening and closing parenthesis, just like in regular functions. The names of parameters are color and lightsOn.  
 
+
+  Next, inside the constructor function's body, you assigned the passed-in color parameter's value to "this.color", and the passed-in lightsOn parameter's value to "this.lightsOn".
+
+*/
+}
+
+
+//let's create instances of Train class
+
+let myFirstTrain = new Train('red', false);
+
+/* 
+    Inside the parentheses, we pass values such as "red" and false, for example, meaning that the color property is set to "red" and the lightsOn property is set to false.
+
+    And, to be able to interact with the new object built this way, you need to assign it to a variable
+*/
+console.log(myFirstTrain)
+
+// We can continue building instances of the Train class. Even if we give them exactly the same properties, they are still separate objects.
+
+const mySecondTrain = new Train('blue', false);
+const myThirdTrain = new Train('blue', false);
+
+// However, this is not all that classes can offer.
+
+
+// we can also add methods to classes, and these methods will then be shared by all future instance objects of our Train2 class.
+
+
+class Train2 {
+    constructor(color, lightsOn) {
+        this.color = color;
+        this.lightsOn = lightsOn;
+    }
+    toggleLights() {
+        this.lightsOn = !this.lightsOn;
+    }
+    lightsStatus() {
+        console.log('Lights on?', this.lightsOn);
+    }
+    getSelf() {
+        console.log(this);
+    }
+    getPrototype() {
+        var proto = Object.getPrototypeOf(this);
+        console.log(proto);
+    }
 }
