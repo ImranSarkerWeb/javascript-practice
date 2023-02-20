@@ -63,4 +63,5 @@ class Trian {
     this.lightsOn = lightsOn;
   }
 //   Notice the syntax of the constructor. The constructor is a special function in my Train class.
+
 }
