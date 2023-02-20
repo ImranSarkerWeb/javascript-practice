@@ -38,7 +38,7 @@ const positionToAdd = document.getElementById("parent");
 console.log(positionToAdd)
 
 
-
+//onclick attribute called from the html
 function addNewItem (){
     let text = item.value;
     const li = document.createElement('li');
@@ -49,11 +49,12 @@ function addNewItem (){
     document.body.style.backgroundColor = '#' + randomColor
 }
 
+
+//if we type delete input field the button will enabled
 const confirmField = document.getElementById('delete-item');
 const btnDelete = document.getElementById('btn-delete');
 
 confirmField.addEventListener('keyup', function(event){
     let confirm = event.target.value;
-   
     confirm === 'delete' ? btnDelete.removeAttribute('disabled') : btnDelete.setAttribute('disabled', true)
 })
