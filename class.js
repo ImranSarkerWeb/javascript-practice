@@ -111,7 +111,32 @@ class Train2 {
         console.log(this);
     }
     getPrototype() {
-        var proto = Object.getPrototypeOf(this);
+        let proto = Object.getPrototypeOf(this);
         console.log(proto);
     }
 }
+
+
+/* 
+    Now, there are four methods on our Train2 class: 
+    toggleLights(), lightsStatus(),  getSelf() and getPrototype().
+
+    1. The toggleLights method uses the logical not operator, !. This operator will change the value stored in the lightsOn property of the future instance object of the Train class; hence the !this.lightsOn. And the = operator to its left means that it will get assigned to this.lightsOn, meaning that it will become the new value of the lightsOn property on that given instance object.
+
+    2. The lightsStatus() method on the Train class just reports the current status of the lightsOn variable of a given object instance.
+
+    3. The getSelf() method prints out the properties on the object instance it is called on.
+
+    4. The getPrototype() console logs the prototype of the object instance of the Train class. The prototype holds all the properties shared by all the object instances of the Train class. To get the prototype, you'll be using JavaScript's built-in Object.getPrototypeOf() method, and passing it this object - meaning, the object instance inside of which this method is invoked.    
+
+*/
+
+// Now we can build a brand new train using this updated Train2 class:
+
+const train4 = new Train2('red', false);
+console.log(train4)
+
+train4.toggleLights(); // undefined
+train4.lightsStatus(); // Lights on? true
+train4.getSelf(); // Train {color: 'red', lightsOn: true}
+train4.getPrototype(); // {constructor: f, toggleLights: f, ligthsStatus: f, getSelf: f, getPrototype: f}
