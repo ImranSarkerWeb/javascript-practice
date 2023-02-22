@@ -6,6 +6,28 @@
 }
 
 body{
-    /* width: 80%; */
+    width: 80%;
     margin: 0 auto;
+}
+
+#post-container{
+    margin-top: 20px;
+}
+
+button{
+    background-color: skyblue;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+
+}
+.post{
+    background-color: coral;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.post>h3{
+    margin: 10px 0;
 }

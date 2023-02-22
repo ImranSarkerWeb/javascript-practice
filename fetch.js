@@ -34,4 +34,30 @@ document.getElementById('addUsers').addEventListener('click', function(){
             positionToAdd.appendChild(li)
         }
     }
+    document.getElementById('addUsers').setAttribute('disabled', 'true')
+})
+
+//now let's display some post using fetch API
+
+const addPostBtn = document.getElementById('addPosts')
+addPostBtn.addEventListener('click', function(){
+      const postDiv = document.getElementById('post-container');
+      fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())
+        .then(posts => displayPost(posts))
+
+    function displayPost(posts){
+        for(const post of posts){
+            const div = document.createElement('div');
+            div.classList.add('post');
+            div.innerHTML = `
+            <h4> User-${post.userId}</h4>
+            <h3> Title: ${post.title}</h3>
+            <p>Post Description: ${post.body}</p>
+            `
+            postDiv.appendChild(div)
+        }
+    } 
+    addPostBtn.innerText = 'Posted';
+    addPostBtn.setAttribute('disabled', true)
 })
