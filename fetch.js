@@ -19,3 +19,19 @@ function getUsers(){
 function displayData(data){
     console.log(data)
 }
+
+// now let's display the collected data to the webpag dynamically
+
+document.getElementById('addUsers').addEventListener('click', function(){
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(users => display(users))
+    
+    function display(users){
+        for(const user of users){
+            const li = document.createElement('li')
+            li.innerText = user.name;
+            positionToAdd.appendChild(li)
+        }
+    }
+})
