@@ -39,3 +39,10 @@ console.log(typeof shop) //object
 
 const jsonShop = JSON.stringify(shop) //converted a regular object to JSON data
 console.log(jsonShop)
+
+/* 
+    We can convert a JSON data to reqular Object using JSON.parse() method
+*/
+
+const convertToObjFromJSON = JSON.parse(jsonShop);
+console.log(convertToObjFromJSON)
