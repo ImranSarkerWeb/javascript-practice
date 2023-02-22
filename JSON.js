@@ -10,3 +10,32 @@
 
 const jsonVariable = '{}'
 console.log(typeof jsonVariable) //string
+
+/* 
+    JSON objects can gather data like Numbers, Arrays, Booleans or Stings.
+    However, they cannot store functions inside.
+*/
+
+//regular Object
+
+const shop = {
+    owner: "Imran",
+    address:{
+        Vill: "Dhatia",
+        Post: "Dukla",
+        PS: "Mukallipura",
+        Dist:"GorurNikula"
+    },
+    conatct: ['+8880187548', 'emo@gamail.com'],
+    isOpen: true,
+    isNew: false,
+}
+
+console.log(typeof shop) //object
+
+/* 
+    We can convert a JS object to a JSON with the JSON.srtingify() method
+*/
+
+const jsonShop = JSON.stringify(shop) //converted a regular object to JSON data
+console.log(jsonShop)
