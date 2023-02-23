@@ -11,40 +11,37 @@
 </head>
 
 <body>
-    <div class="flex justify-center item-center mt-10">
+    <button class="btn btn-primary" id="generate-quote" onclick="back()">Goback Home</button>
+    <div class="flex justify-center item-center mt-10 gap-4">
         <div class="card w-96 bg-base-100 shadow-xl image-full">
             <figure><img src="https://picsum.photos/400/400?random=1" alt="Shoes" /></figure>
             <div class="card-body">
-                <h2 class="card-title">Qoutes:</h2>
+                <h2 class="card-title">Quotes:</h2>
                 <p>
                 <blockquote id="quote">Of course, without hard work talent is nothing </blockquote>
                 </p>
                 <div class="card-actions justify-end">
                     <button class="btn btn-primary" id="generate-quote" onclick="display()">New Quote</button>
-                    <button class="btn btn-primary" id="generate-quote" onclick="back()">Goback Home</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-side bg-base-100 shadow-xl">
+            
+            <div class="card-body">
+                <figure><img class="rounded-lg" id="user-img" src="https://picsum.photos/200/200?random=1" alt="Movie" /></figure>
+                <h2 class="card-title" id="name">Name here: </h2>
+                <p id="email">Email: </p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary" onclick="displayUser()">Random User</button>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <script>
-       function display(){
-        fetch('https://api.kanye.rest/')
-            .then(response => response.json())
-            .then(quotes => displayQuote(quotes))
-
-        function displayQuote(quotes){
-            const blockQuote = document.getElementById('quote')
-            blockQuote.innerText = quotes.quote;
-            console.log(quotes.quote)
-        }
-       }
-
-       function back(){
-        window.location.href = 'index.html'
-       }
-    </script>
+    <script src="API.js"></script>
 </body>
 
 </html>
