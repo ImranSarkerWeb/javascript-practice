@@ -1,14 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM practice</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+
+<body class="mx-auto w-[90%]">
     <main>
+        <header>
+            <div class="navbar bg-base-100 ">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="randomQuote.html">Qute</a></li>
+                            <li tabindex="0">
+                                <a class="justify-between">
+                                    Another
+                                    <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                                    </svg>
+                                </a>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Item 3</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a href="randomQuote.html">Quote</a></li>
+                        <li tabindex="0">
+                            <a>
+                                Parent
+                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 24 24">
+                                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                                </svg>
+                            </a>
+                            <ul class="p-2">
+                                <li><a>Submenu 1</a></li>
+                                <li><a>Submenu 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn">Get started</a>
+                </div>
+            </div>
+        </header>
         <section id="section-1">
             <ul>
                 <li>Item-1</li>
@@ -27,7 +87,7 @@
         </section>
         <section class="section-3" id="section3">
             <ul id="parent">
-                
+
             </ul>
         </section>
 
@@ -37,12 +97,12 @@
         <br>
         <p>Type delete for confirm.</p>
         <input type="text" id="delete-item">
-        <button id="btn-delete" disabled> Delete </button>
+        <button id="btn-delete" class="btn btn-success" disabled> Delete </button>
 
         <br>
-        <button onclick="getUsers()">Get users in the console</button>
-        <button id="addUsers">Add users</button>
-        <button id="addPosts">Add Posts</button>
+        <button onclick="getUsers()" class="btn btn-success">Get users in the console</button>
+        <button id="addUsers" class="btn btn-success">Add users</button>
+        <button id="addPosts" class="btn btn-success">Add Posts</button>
         <div id="post-container">
             <h2>All Posts</h2>
 
@@ -53,4 +113,5 @@
     <script src="dom.js"></script>
     <script src="fetch.js"></script>
 </body>
+
 </html>

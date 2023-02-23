@@ -63,22 +63,3 @@ addPostBtn.addEventListener('click', function(){
 })
 
 
-//handaling comments
-const commentDiv = document.getElementById("comments");
-
-window.addEventListener('load', function(){
-    fetch("https://jsonplaceholder.typicode.com/comments")
-    .then(res => res.json())
-    .then(comments => displayComment(comments))
-
-    function displayComment(comments){
-        console.log(comments)
-        for(const comment of comments){
-        const div = document.createElement('div');
-        div.innerHTML =`
-        <h6>name ${comment.name}</h6>
-        `
-        }
-        commentDiv.appendChild(div)
-    }
-})
