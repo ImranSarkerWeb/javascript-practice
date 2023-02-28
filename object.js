@@ -91,3 +91,14 @@ for(const key of Object.keys(mofizAli)){
 /* 
     Hurrah! We learned about the building blocks that make the for of loop useful to iterate over objects- although objects are not iterables.
 */
+
+
+/* 
+    Difference  between for-in loops and for-of loops when applied to objects in javascript
+*/
+
+/* {
+    for in loop iterate over the properties of the object and its prototype.
+} */
+
+//for-of loops loop over only fo the objects properties which we apply on.
