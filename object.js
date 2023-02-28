@@ -61,9 +61,33 @@ const mofizAli = {
     }
 }
 
-console.log(mofizAli.play())
+// console.log(mofizAli.play())
 
 
-console.log(Object.keys(mofizAli))
-console.log(Object.values(mofizAli))
-console.log(Object.entries(mofizAli))
+// console.log(Object.keys(mofizAli))
+// console.log(Object.values(mofizAli))
+// console.log(Object.entries(mofizAli))
+
+
+//===========Loop over object using
+/* 
+To Begin it's important to know tha a for of loop cannot work on an object directly, since object is not iterable.
+Contrary to objects, arrays are iterable.
+
+Luckily, we can use the fact that a for loop can be run on arrays to loop over the object.
+*/
+
+/*===========But how? 
+By using Object.keys(obj), Object.values(obj), Object.entries(obj) method we can collect all the ingredient that we need to loop over any object's own property keys and values.
+
+A very simple example of doing just that:
+
+*/
+
+for(const key of Object.keys(mofizAli)){
+    console.log(key, " :" + mofizAli[key])
+}
+
+/* 
+    Hurrah! We learned about the building blocks that make the for of loop useful to iterate over objects- although objects are not iterables.
+*/
