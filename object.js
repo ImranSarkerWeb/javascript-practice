@@ -102,3 +102,20 @@ for(const key of Object.keys(mofizAli)){
 } */
 
 //for-of loops loop over only fo the objects properties which we apply on.
+
+
+//lets talk about seal and freeze method
+
+//============Object.seal(obj)
+/* 
+    1.We cannot delete any property
+    2.also cannot add property
+    3.But we could update any exiting property value
+*/
+
+//=============Object.freeze(obj)
+
+/* 
+    1.This method freezed totally, 
+    2. we can't add, delete or update any property and value
+*/
